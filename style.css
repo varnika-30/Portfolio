@@ -1,0 +1,418 @@
+/* GLOBAL */
+body {
+    margin: 0;
+    font-family: "Georgia", serif;
+    background: #fffaf7;
+    color: #2c2c2c;
+    overflow-x: hidden;
+    background: linear-gradient(180deg, #fff8f3 0%, #ffecef 100%);
+}
+
+.text{
+    text-align: left;
+    margin-top: 10px;
+    color: #6a6a6a;
+    line-height: 1.5;
+    font-size: 1.3rem;
+    padding-bottom: 30px;
+}
+
+.layout {
+    min-height: 100vh;
+    padding: 40px 30px;
+
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+
+    /* Cute fade + slide-in on load */
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUpSection 1.2s ease-out forwards;
+    animation-delay: 0.4s;
+}
+
+.layout .Title {
+    color: #d6336c;
+    font-size: 3.5rem;
+}
+
+.pg_lay{
+    padding: 30px;
+}
+
+/* ---------------------- */
+/* HERO SECTION */
+/* ---------------------- */
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;    
+    position: relative;
+    opacity: 1;
+}
+
+.Exp_button{
+    display: inline-block;
+    padding: 14px 30px;
+    background: #d6336c;             
+    color: white;
+    font-size: 1.7rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 8px 20px rgba(214, 51, 108, 0.2);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    margin-top: 0px;
+}
+
+.Exp_button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(214, 51, 108, 0.35);
+}
+
+.name {
+    color: #d6336c;
+}
+
+.hello{
+    font-size: 5rem;
+    margin: 0;
+    animation: fadeIn 1.2s ease-out forwards;
+}
+
+.tagline {
+    margin-top: 25px;
+    font-size: 1.8rem;
+    color: #444;
+    opacity: 1;
+    animation: fadeUp 1.4s ease-out forwards;
+}
+
+.scroll-text {
+    margin-top: 40px;
+    animation: fadeUp 1.8s ease-out forwards;
+    font-size: 1.3rem;
+    color: #444;
+    animation:
+        fadeUp 1.8s ease-out forwards,
+        float 3s ease-in-out infinite;
+    opacity: 1;
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    animation: float 3s ease-in-out infinite;
+    color: #e76b0c;
+    text-decoration: underline;
+}
+
+
+/* Cute floating animation (optional, aesthetic) */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
+}
+
+/* ---------------------- */
+/* EXPLORE SECTION */
+/* ---------------------- */
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+@keyframes fadeUpSection {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------------------- */
+/* TEXT + CARDS */
+/* ---------------------- */
+
+.layout h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin: 0;
+    color: #d47c35;
+}
+
+.subtitle {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.7rem;
+    color: #6a6a6a;
+}
+
+.card-grid {
+    display: flex;
+    margin-top: 35px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: #fff9f4;
+    width: 250px;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    text-decoration: none;
+    color: inherit;
+    margin: 25px;
+    border: 0.6px solid #d47c35;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.15),
+        0 0 25px rgba(214, 51, 108, 0.35);
+}
+
+.icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 1.6rem;
+    color: #d47c35;
+}
+
+.card p {
+    margin-top: 8px;
+    opacity: 0.75;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .name { font-size: 3rem; }
+    .tagline { font-size: 1.2rem; }
+}
+
+/* ---------------------- */
+/* About */
+/* ---------------------- */
+
+.img_ab{
+    float: left;
+    width: 400px;
+    padding: 20px;
+    margin-right: 10px;
+}
+
+/* ---------------------- */
+/* Milestones */
+/* ---------------------- */
+
+.mstone {
+    position: relative;
+    margin-top: 50px;
+    height: 600px;
+}
+
+.mstone::before{
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    width: 5px;
+    height: 97%;
+    content: "";
+    background: #d6336c;
+    box-shadow: 0 0 12px rgba(214, 51, 108, 0.4);
+}
+
+.mstone_container{
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.mstone_txt{
+    width:90%;
+    margin-left: 25px;
+    position: relative;
+    left: 25px;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+    text-align: left;
+    color: #6a6a6a;
+    line-height: 1.5;
+    font-size: 1.2rem;
+    padding-top: 5px;
+    animation-name: fadeSlideUp;
+}
+
+.mstone_head {
+    color: #d47c35;
+    font-size: 1.5rem;
+    text-align: left;
+    font-weight: 500px;
+    margin-left: 25px;
+    position: relative;
+    left: 25px;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+    animation-name: fadeSlideRight;
+}
+
+.dot{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #d6336c;
+    border: 4px solid #fff;
+    animation: dotPulse 1.8s infinite alternate ease-in-out;
+    position: absolute;
+    left: -50px;
+    box-shadow: 0 0 15px rgba(214, 51, 108, 0.4);
+}
+
+/*Animations*/
+Alternate animation delay for smooth cascade effect 
+.tl-item:nth-child(1) { animation-delay: 0.2s; }
+.tl-item:nth-child(2) { animation-delay: 0.4s; }
+.tl-item:nth-child(3) { animation-delay: 0.6s; }
+.tl-item:nth-child(4) { animation-delay: 0.8s; }
+.tl-item:nth-child(45) { animation-delay: 1.0s; }
+
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeSlideRight {
+    from {
+        opacity: 0;
+        transform: translateX(-25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* ---------------------- */
+/* Projects */
+/* ---------------------- */
+
+.proj_lay{
+    display: grid;
+    grid-template-columns: repeat(3,400px);
+}
+
+.proj_card{
+    width: 300px;
+    height: 450px;
+    background: #fff9f4;
+    border-radius: 25px;
+    padding: 25px;
+    margin-top: 8px;
+    border: 0.6px solid #d47c35;
+}
+
+.proj_card:hover {
+    transform: translateY(-10px);
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.15),
+        0 0 25px rgba(214, 51, 108, 0.35);
+}
+
+.proj_img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.proj_head{
+    color: #d47c35;
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 5px;
+    font-weight: 400px;
+    margin-top: 20px;
+}
+
+/* ---------------------- */
+/* Contact */
+/* ---------------------- */
+
+.contact_grid {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: center;
+    gap: 40px;
+}
+
+.contact_btn {
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 0px 12px 20px;            /* smaller padding */
+    background: #fff9f4;             
+    color: black;
+    font-size: 1.2rem;             /* smaller font */
+    border-radius: 25px;           /* smaller curve */
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 0 6px 15px rgba(214, 51, 108, 0.15);
+    border: 2px solid #d6336c;     /* thinner border */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.icon {
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 10px;    /* tweak until perfect */
+}
+
+
+.contact_btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(214, 51, 108, 0.35);
+}
+
+#Contact {
+    min-height: auto;
+    padding-top: 60px;      /* space above icons */
+    padding-bottom: 160px;   /* space before footer */
+}
+
+/* ---------------------- */
+/* Footer */
+/* ---------------------- */
+
+.footer {
+    background: #d6336c;
+    color: white;
+    text-align: center;
+    padding: 0.3rem 0;
+    font-size: 1.3rem;
+}
